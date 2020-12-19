@@ -6,8 +6,8 @@ using Mirror;
 public class ZB_UnitProjectile : NetworkBehaviour
 {
     [SerializeField] private Rigidbody rb = null;
-    [SerializeField] private float fireForce = 10;
-    [SerializeField] private float destroyTime = 5;
+    [SerializeField] private float fireForce = 10f;
+    [SerializeField] private float destroyTime = 5f;
     [SerializeField] private int dealDamage = 20; 
 
     private void Start()

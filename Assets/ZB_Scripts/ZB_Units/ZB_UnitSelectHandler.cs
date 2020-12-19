@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 
 public class ZB_UnitSelectHandler : MonoBehaviour
 {
-    [SerializeField] private LayerMask mask;
-    [SerializeField] private RectTransform unitSelectionArea;
-    [SerializeField] private ZB_RTS_Player player;
+    [SerializeField] private LayerMask mask = new LayerMask();
+    [SerializeField] private RectTransform unitSelectionArea = null;
+    [SerializeField] private ZB_RTS_Player player = null;
 
     private Vector2 startPos; 
     private Camera mainCamera;

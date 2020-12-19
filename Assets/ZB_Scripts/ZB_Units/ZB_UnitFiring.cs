@@ -8,9 +8,9 @@ public class ZB_UnitFiring : NetworkBehaviour
     [SerializeField] private ZB_Targeting targeting = null;
     [SerializeField] private GameObject projPrefab = null;
     [SerializeField] private Transform projSpawn = null;
-    [SerializeField] private float fireRange = 5;
-    [SerializeField] private float fireRate = 1;
-    [SerializeField] private float rotSpeed = 45;
+    [SerializeField] private float fireRange = 5f;
+    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float rotSpeed = 20f;
 
     private float lastFireTime;
 
