@@ -21684,8 +21684,9 @@ GameObject:
   - component: {fileID: 3040648874335975384}
   - component: {fileID: 7900115183933842343}
   - component: {fileID: 5404803455030823061}
+  - component: {fileID: -1850088800075790233}
   m_Layer: 10
-  m_Name: Unit_Player
+  m_Name: ZB_Unit_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21880,7 +21881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  myUnits: []
+  buildings: []
 --- !u!114 &6374032284494950572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21960,6 +21961,22 @@ MonoBehaviour:
   health: {fileID: 7900115183933842343}
   healthBarParent: {fileID: 2608813069257266078}
   healthBarImage: {fileID: 2608813069739394491}
+--- !u!114 &-1850088800075790233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475945285990783295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f63d3d7469d784c8454104428f84a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderer:
+  - {fileID: 8475945285988780031}
 --- !u!1001 &2713299446472121176
 PrefabInstance:
   m_ObjectHideFlags: 0

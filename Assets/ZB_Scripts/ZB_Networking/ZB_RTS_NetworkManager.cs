@@ -13,6 +13,12 @@ public class ZB_RTS_NetworkManager : NetworkManager
     {
         base.OnServerAddPlayer(conn);
 
+        ZB_RTS_Player player = conn.identity.GetComponent<ZB_RTS_Player>();
+        player.SetTeamColor(new Color(
+            UnityEngine.Random.Range(0f, 1f),
+            UnityEngine.Random.Range(0f, 1f),
+            UnityEngine.Random.Range(0f, 1f)));
+
        GameObject unitSpawnInstance = Instantiate(unitSpawnPrefab, conn.identity.transform.position, conn.identity.transform.rotation);
        NetworkServer.Spawn(unitSpawnInstance, conn); 
     }

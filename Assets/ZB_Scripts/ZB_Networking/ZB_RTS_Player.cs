@@ -9,12 +9,16 @@ public class ZB_RTS_Player : NetworkBehaviour
     private List<ZB_Unit> myUnits = new List<ZB_Unit>();
     private List<ZB_Building> myBuildings = new List<ZB_Building>();
     [SerializeField] private ZB_Building[] buildings = new ZB_Building[0];
-
     // resources
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] 
     private int resources = 500;
-
     public event Action<int> ClientOnResourcesUpdated;
+    private Color teamColor = new Color(); 
+
+    public Color GetTeamColor()
+    {
+        return teamColor; 
+    }
 
     public int GetResources()
     {
@@ -29,12 +33,6 @@ public class ZB_RTS_Player : NetworkBehaviour
     public List<ZB_Building> GetMyBuildings()
     {
         return myBuildings; 
-    }
-
-    [Server]
-    public void SetResources(int newResources) // Seter 
-    {
-        resources = newResources; 
     }
 
     #region Server 
@@ -55,6 +53,18 @@ public class ZB_RTS_Player : NetworkBehaviour
 
         ZB_Building.ServerOnBuildingSpawn -= ServerHandleBuildingSpawn;
         ZB_Building.ServerOnBuildingDeSpawned -= ServerOnBuildingDeSpawned;
+    }
+
+    [Server]
+    public void SetTeamColor(Color newTeamColor)
+    {
+        teamColor = newTeamColor;
+    }
+
+    [Server]
+    public void SetResources(int newResources) // Seter 
+    {
+        resources = newResources;
     }
 
     [Command]
