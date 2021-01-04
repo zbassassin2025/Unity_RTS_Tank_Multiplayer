@@ -21963,6 +21963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cameraTransform: {fileID: 0}
   buildings: []
 --- !u!114 &6374032284494950572
 MonoBehaviour:

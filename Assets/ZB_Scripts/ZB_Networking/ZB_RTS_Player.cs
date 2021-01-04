@@ -6,14 +6,24 @@ using System;
 
 public class ZB_RTS_Player : NetworkBehaviour
 {
+    [SerializeField] private Transform cameraTransform = null; 
+    [SerializeField] private ZB_Building[] buildings = new ZB_Building[0];
+   // [SerializeField] private LayerMask buildingBlockLayer = new LayerMask();
+    // [SerializeField] private float buildingRangeLimit = 5f; 
+    // resources
+    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
+    private int resources = 500;
+
     private List<ZB_Unit> myUnits = new List<ZB_Unit>();
     private List<ZB_Building> myBuildings = new List<ZB_Building>();
-    [SerializeField] private ZB_Building[] buildings = new ZB_Building[0];
-    // resources
-    [SyncVar(hook = nameof(ClientHandleResourcesUpdated))] 
-    private int resources = 500;
+
     public event Action<int> ClientOnResourcesUpdated;
     private Color teamColor = new Color(); 
+
+    public Transform GetCameraTransform()
+    {
+        return cameraTransform; 
+    }
 
     public Color GetTeamColor()
     {
