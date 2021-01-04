@@ -57,14 +57,20 @@ public class ZB_UnitMovement : NetworkBehaviour
     [Command]
     public void CmdMove(Vector3 position)
     {
-        targeting.ClearTarget(); 
+        ServerMove(position); 
+    }
 
-        if(!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)) // if not valid position
+    [Server]
+    public void ServerMove(Vector3 position)
+    {
+        targeting.ClearTarget();
+
+        if (!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)) // if not valid position
         {
-            return; 
+            return;
         }
 
-        agent.SetDestination(position); 
+        agent.SetDestination(hit.position);
     }
 
     [Server]

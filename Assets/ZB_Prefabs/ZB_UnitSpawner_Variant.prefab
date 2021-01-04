@@ -29,9 +29,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  unitPrefab: {fileID: 8475945285990783295, guid: 05e08c02bc14a204387575320d7e2d33, type: 3}
+  unitPrefab: {fileID: 0}
   unitSpawnTransform: {fileID: 1567333462101548847}
   health: {fileID: 4860508469325272700}
+  remainingUnitsText: {fileID: 0}
+  unitProgressImage: {fileID: 0}
+  maxUnitQueue: 5
+  spawnMoveRange: 6
+  unitSpawnDuration: 4
 --- !u!1 &4693213525264588883
 GameObject:
   m_ObjectHideFlags: 0

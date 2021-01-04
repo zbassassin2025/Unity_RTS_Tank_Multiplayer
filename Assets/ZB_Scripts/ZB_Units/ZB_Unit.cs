@@ -7,6 +7,8 @@ using System;
 
 public class ZB_Unit : NetworkBehaviour
 {
+    [SerializeField] private int resourceCost = 10; 
+
     [SerializeField] private UnityEvent onSelected = null;
     [SerializeField] private UnityEvent onDeselected = null;
     [SerializeField] private ZB_UnitMovement unitMovement = null;
@@ -59,6 +61,11 @@ public class ZB_Unit : NetworkBehaviour
         }
 
         AuthorityOnUnitDeSpawn?.Invoke(this); 
+    }
+
+    public int GetResourceCost()
+    {
+        return resourceCost; 
     }
 
     public ZB_UnitMovement GetUnitMovement()
