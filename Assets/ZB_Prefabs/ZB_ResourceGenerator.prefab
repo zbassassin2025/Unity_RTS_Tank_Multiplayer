@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &153828496484203913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d583fcf8077b8be4392945166beb0600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 4860508469325272700}
+  resourcesPerInterval: 10
+  interval: 2
+--- !u!114 &4254476918156944082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f63d3d7469d784c8454104428f84a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  colorRenderer:
+  - {fileID: 5813228020593632769}
+  - {fileID: 104469805277949681}
 --- !u!1 &2881744301161779738
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,40 +115,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &153828496484203913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726558065127371972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d583fcf8077b8be4392945166beb0600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  health: {fileID: 4860508469325272700}
-  resourcesPerInterval: 10
-  interval: 2
---- !u!114 &4254476918156944082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726558065127371972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8f63d3d7469d784c8454104428f84a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  colorRenderer:
-  - {fileID: 5813228020593632769}
-  - {fileID: 104469805277949681}
 --- !u!1 &4693213525264588883
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: id
-      value: 2
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: icon

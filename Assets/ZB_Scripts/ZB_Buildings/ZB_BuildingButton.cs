@@ -24,22 +24,13 @@ public class ZB_BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         mainCamera = Camera.main;
         iconImg.sprite = building.GetIcon();
-        priceText.text = building.GetPrice().ToString(); 
+        priceText.text = building.GetPrice().ToString();
 
+        player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
     }
 
     private void Update()
-    {
-        if (player == null)
-        {
-            // player = NetworkClient.connection.identity.GetComponent<RTS_Player>(); // this throws and error 
-            return; 
-        }
-        else
-        {
-            player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
-        }
-
+    { 
         if(buildingPreviewInstance == null)
         {
             return; 

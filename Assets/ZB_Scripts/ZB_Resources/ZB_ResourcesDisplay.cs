@@ -7,24 +7,13 @@ using UnityEngine;
 public class ZB_ResourcesDisplay : MonoBehaviour
 {
     [SerializeField] private TMP_Text resourcesText = null;
-    private ZB_RTS_Player player; 
+    private ZB_RTS_Player player;
 
-    private void Update()
+    private void Start()
     {
-        if (player == null)
-        {
-            return;
-        }
-
-        if (player != null)
-        {
-            ClientHandleResourcesUpdated(player.GetResources());
-
-            player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
-        }
-
         player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
-        // this is trying to get component in Update without checking if player if there and errors  // get player object for connection 
+        ClientHandleResourcesUpdated(player.GetResources());
+        player.ClientOnResourcesUpdated += ClientHandleResourcesUpdated;
     }
 
     private void OnDestroy()

@@ -19,6 +19,8 @@ public class ZB_UnitSelectHandler : MonoBehaviour
     {
         mainCamera = Camera.main;
 
+        player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
+
         ZB_Unit.AuthorityOnUnitDeSpawn += AuthorityHandleUnitDespawned;
         ZB_GameOverHandler.ClientOnGameOver += ClientHandleGameOver; 
     }
@@ -31,12 +33,6 @@ public class ZB_UnitSelectHandler : MonoBehaviour
 
     private void Update()
     {
-        if(player == null)
-        {
-            player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
-            // this is trying to get component and errors  // get player object for connection 
-        }
-
         if (Mouse.current.leftButton.wasPressedThisFrame) // if pressed left mouse button 
         {
             StartSelectArea(); 

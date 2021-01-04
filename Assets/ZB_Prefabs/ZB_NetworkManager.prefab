@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5653025248702392949}
   - component: {fileID: 5653025248702392948}
   - component: {fileID: 5653025248702392946}
-  - component: {fileID: 5653025248702392947}
   m_Layer: 0
   m_Name: ZB_NetworkManager
   m_TagString: Untagged
@@ -95,7 +94,7 @@ MonoBehaviour:
   showDebugMessages: 0
   serverTickRate: 30
   offlineScene: Assets/ZB_Scenes/ZB_Scene_Menu.unity
-  onlineScene: Assets/ZB_Scenes/ZB_Scene_Map_01.unity
+  onlineScene: 
   transport: {fileID: 5653025248702392948}
   networkAddress: localhost
   maxConnections: 4
@@ -111,20 +110,5 @@ MonoBehaviour:
   - {fileID: 2640116412646789441, guid: e2a10d37f15ed11409d7b46819570316, type: 3}
   - {fileID: 547840911072706815, guid: 3109b05a94789424e963dc3e02e39d5b, type: 3}
   - {fileID: 2726558065127371972, guid: 1d76ef56fc33e1747845b60f00601a7b, type: 3}
-  unitSpawnPrefab: {fileID: 2726558065127371972, guid: 5723dd64285a6084eb0e6804507d1630, type: 3}
+  unitBasePrefab: {fileID: 686681034883326368, guid: 8517953fd89682343892306efe6cfde0, type: 3}
   gameOverHandlerPrefab: {fileID: 8639971440582898114, guid: 3109b05a94789424e963dc3e02e39d5b, type: 3}
---- !u!114 &5653025248702392947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5653025248702392950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0

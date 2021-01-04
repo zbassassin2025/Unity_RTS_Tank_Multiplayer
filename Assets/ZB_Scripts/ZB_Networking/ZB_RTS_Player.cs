@@ -14,11 +14,30 @@ public class ZB_RTS_Player : NetworkBehaviour
     [SyncVar(hook = nameof(ClientHandleResourcesUpdated))]
     private int resources = 500;
 
+    [SyncVar(hook =nameof(AuthorityHandlePartyOwnerStateUpdated))]
+    private bool isPartyOwner;
+
+    [SyncVar(hook =(nameof(ClientHandleDisplayNameUpdated)))]
+    private string displayName; 
+
     private List<ZB_Unit> myUnits = new List<ZB_Unit>();
     private List<ZB_Building> myBuildings = new List<ZB_Building>();
 
     public event Action<int> ClientOnResourcesUpdated;
+
+    public static event Action ClientOnInfoUpdated;
+    public static event Action<bool> AuthorityOnPartyOwnerStateUpdated; 
     private Color teamColor = new Color(); 
+
+    public string GetDisplayName()
+    {
+        return displayName; 
+    }
+
+    public bool GetIsPartyOwner()
+    {
+        return isPartyOwner; 
+    }
 
     public Transform GetCameraTransform()
     {
@@ -54,6 +73,8 @@ public class ZB_RTS_Player : NetworkBehaviour
 
         ZB_Building.ServerOnBuildingSpawn += ServerHandleBuildingSpawn;
         ZB_Building.ServerOnBuildingDeSpawned += ServerOnBuildingDeSpawned;
+
+        DontDestroyOnLoad(gameObject); 
     }
 
     public override void OnStopServer()
@@ -66,6 +87,18 @@ public class ZB_RTS_Player : NetworkBehaviour
     }
 
     [Server]
+    public void SetDisplayName(string displayName)
+    {
+        this.displayName = displayName; 
+    }
+
+    [Server]
+    public void SetPartyOwner(bool state)
+    {
+        isPartyOwner = state; 
+    }
+
+    [Server]
     public void SetTeamColor(Color newTeamColor)
     {
         teamColor = newTeamColor;
@@ -75,6 +108,17 @@ public class ZB_RTS_Player : NetworkBehaviour
     public void SetResources(int newResources) // Seter 
     {
         resources = newResources;
+    }
+
+    [Command]
+    public void CmdStartGame()
+    {
+        if(!isPartyOwner)
+        {
+            return; 
+        }
+
+        ((ZB_RTS_NetworkManager)NetworkManager.singleton).StartGame(); 
     }
 
     [Command]
@@ -155,11 +199,32 @@ public class ZB_RTS_Player : NetworkBehaviour
         ZB_Building.AuthorityOnBuildingSpawn += AuthorityHandleBuildingDeSpawned;
     }
 
+    public override void OnStartClient()
+    {
+        if(NetworkServer.active)
+        {
+            return; 
+        }
+
+        DontDestroyOnLoad(gameObject); 
+
+       ((ZB_RTS_NetworkManager) NetworkManager.singleton).Players.Add(this); 
+    }
+
     public override void OnStopClient()
     {
-        if (!isClientOnly || !hasAuthority)
+        ClientOnInfoUpdated?.Invoke();
+
+        if (!isClientOnly)
         {
             return;
+        }
+
+        ((ZB_RTS_NetworkManager)NetworkManager.singleton).Players.Remove(this);
+
+        if(!hasAuthority)
+        {
+            return; 
         }
 
         ZB_Unit.AuthorityOnUnitSpawn -= AuthorityHandleUnitSpawned; 
@@ -168,9 +233,24 @@ public class ZB_RTS_Player : NetworkBehaviour
         ZB_Building.AuthorityOnBuildingSpawn -= AuthorityHandleBuildingDeSpawned;
     }
 
+    private void ClientHandleDisplayNameUpdated(string oldDisplayName, string newDisplayName)
+    {
+        ClientOnInfoUpdated?.Invoke(); 
+    }
+
     private void ClientHandleResourcesUpdated(int oldResources, int newResources)
     {
         ClientOnResourcesUpdated?.Invoke(newResources);  
+    }
+
+    private void AuthorityHandlePartyOwnerStateUpdated(bool oldState, bool newState)
+    {
+        if(!hasAuthority)
+        {
+            return; 
+        }
+
+        AuthorityOnPartyOwnerStateUpdated?.Invoke(newState); 
     }
 
     private void AuthorityHandleUnitSpawned(ZB_Unit unit) 
