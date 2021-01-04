@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1390069386438641732}
   - component: {fileID: 3518459682306819870}
   m_Layer: 5
-  m_Name: Building_Button
+  m_Name: ZB_Building_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b6976cc5649ba4f9f9312ca914eab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 5840406404322537581, guid: 47720c931f3a80546b061289c16a54e2, type: 3}
+  building: {fileID: 0}
   iconImg: {fileID: 21943975268170541}
   priceText: {fileID: 5510369275644012591}
   mask:

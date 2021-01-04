@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247360181294455910, guid: fb1c4c14839044c4197d5927816d1d7c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9021492881415299047, guid: fb1c4c14839044c4197d5927816d1d7c, type: 3}
       propertyPath: mask.m_Bits

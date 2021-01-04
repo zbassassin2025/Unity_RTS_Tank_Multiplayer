@@ -92,5 +92,4 @@ public class ZB_BuildingButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
             buildingPreviewInstance.SetActive(true); 
         }
     }
-
 }
