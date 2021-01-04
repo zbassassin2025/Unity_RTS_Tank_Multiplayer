@@ -19,6 +19,11 @@ public class ZB_UnitSelectHandler : MonoBehaviour
     {
         mainCamera = Camera.main;
 
+        if(player == null)
+        {
+            return; 
+        }
+
         player = NetworkClient.connection.identity.GetComponent<ZB_RTS_Player>();
 
         ZB_Unit.AuthorityOnUnitDeSpawn += AuthorityHandleUnitDespawned;

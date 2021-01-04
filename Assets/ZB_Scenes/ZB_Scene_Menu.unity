@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5653025248702392946, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+      propertyPath: onlineScene
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653025248702392946, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+      propertyPath: transport
+      value: 
+      objectReference: {fileID: 1913737135}
+    - target: {fileID: 5653025248702392948, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5653025248702392949, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.2584977
@@ -177,6 +189,14 @@ PrefabInstance:
     - target: {fileID: 5653025248702392950, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
       propertyPath: m_Name
       value: ZB_NetworkManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169335429645027506, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391571546337896114, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
@@ -2358,7 +2378,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076528755
 GameObject:
@@ -3542,7 +3562,7 @@ Transform:
   m_Children:
   - {fileID: 983078628}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1554563851
 MonoBehaviour:
@@ -3557,7 +3577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 785116746}
-  useSteam: 1
+  useSteam: 0
 --- !u!1 &1649933520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,6 +3980,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821866654}
   m_CullTransparentMesh: 0
+--- !u!114 &1913737135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5653025248702392948, guid: bbba77bf2391cb149959c97fb43cb405, type: 3}
+  m_PrefabInstance: {fileID: 5679435}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1942741981
 GameObject:
   m_ObjectHideFlags: 0
