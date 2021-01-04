@@ -247,7 +247,7 @@ PrefabInstance:
     - target: {fileID: 3518459682306819870, guid: 574688840af5f7849b856a93bfa30f52, type: 3}
       propertyPath: building
       value: 
-      objectReference: {fileID: 9033218580092347657, guid: 1d76ef56fc33e1747845b60f00601a7b, type: 3}
+      objectReference: {fileID: 5550764738141952899, guid: 22926906b8f967b4f9fb4c45cc43b197, type: 3}
     - target: {fileID: 5677326883934615308, guid: 574688840af5f7849b856a93bfa30f52, type: 3}
       propertyPath: m_Name
       value: ZB_Building_Button (1)

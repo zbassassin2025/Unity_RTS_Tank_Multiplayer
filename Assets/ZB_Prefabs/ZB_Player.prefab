@@ -134,7 +134,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 4776298681977315153}
   buildings:
   - {fileID: 5550764738141952899, guid: 25e6cea2a63f20645a7c6c9cba07fb31, type: 3}
-  - {fileID: 9033218580092347657, guid: 1d76ef56fc33e1747845b60f00601a7b, type: 3}
+  - {fileID: 5550764738141952899, guid: 22926906b8f967b4f9fb4c45cc43b197, type: 3}
 --- !u!114 &-6649006327676903018
 MonoBehaviour:
   m_ObjectHideFlags: 0

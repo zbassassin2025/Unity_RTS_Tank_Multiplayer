@@ -122,7 +122,7 @@ public class ZB_RTS_Player : NetworkBehaviour
     }
 
     [Command]
-    public void CmdTryPlaceBuilding(int buildingId, Vector3 point)
+    public void CmdTryPlaceBuilding(int buildingId, Vector3 point) // callback for Building Placement 
     {
         ZB_Building buildingToPlace = null; 
 
@@ -238,7 +238,7 @@ public class ZB_RTS_Player : NetworkBehaviour
         ClientOnInfoUpdated?.Invoke(); 
     }
 
-    private void ClientHandleResourcesUpdated(int oldResources, int newResources)
+    private void ClientHandleResourcesUpdated(int oldResources, int newResources) 
     {
         ClientOnResourcesUpdated?.Invoke(newResources);  
     }
