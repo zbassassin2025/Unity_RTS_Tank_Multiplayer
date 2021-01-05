@@ -42,7 +42,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""25ee5d6f-cdfc-4394-b84e-3c9dc173411e"",
-                    ""path"": ""W"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard & Mouse "",
@@ -53,7 +53,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""464dbafe-4db2-45fd-82bf-460d9916b3f3"",
-                    ""path"": ""S"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard & Mouse "",
@@ -64,7 +64,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""26fb9eaa-50b5-4d7c-87e6-68a6aa4436fe"",
-                    ""path"": ""A"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard & Mouse "",
@@ -75,7 +75,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""627a8a72-c08f-4a23-8e1d-97c090398946"",
-                    ""path"": ""D"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyBoard & Mouse "",
