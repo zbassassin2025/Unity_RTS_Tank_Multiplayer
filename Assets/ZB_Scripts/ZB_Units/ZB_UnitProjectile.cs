@@ -23,7 +23,7 @@ public class ZB_UnitProjectile : NetworkBehaviour
     [ServerCallback]
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<NetworkIdentity>(out NetworkIdentity networkIdentity))
+        if(other.TryGetComponent(out NetworkIdentity networkIdentity))
         {
             if(networkIdentity.connectionToClient == connectionToClient)
             {
@@ -31,7 +31,7 @@ public class ZB_UnitProjectile : NetworkBehaviour
             }
         }
 
-        if(other.TryGetComponent<ZB_Health>(out ZB_Health health))
+        if(other.TryGetComponent(out ZB_Health health))
         {
             health.DealDamage(dealDamage); // 5 hits to destroy object  
         }

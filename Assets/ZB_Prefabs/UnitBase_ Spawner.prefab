@@ -111,6 +111,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &269331387215425553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8160543690137459740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0de20165998f542935a0c5e70a70eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 0}
 --- !u!114 &2747268628454716489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,9 +140,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  unitPrefab: {fileID: 8475945285990783295, guid: 05e08c02bc14a204387575320d7e2d33, type: 3}
+  unitPrefab: {fileID: 0}
   unitSpawnTransform: {fileID: 5898678236592313679}
   health: {fileID: 324251349381509819}
+  remainingUnitsText: {fileID: 0}
+  unitProgressImage: {fileID: 0}
+  maxUnitQueue: 5
+  spawnMoveRange: 6
+  unitSpawnDuration: 4
 --- !u!114 &6318246016780941768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1286960449385808441, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1286960449385808441, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: m_LocalPosition.z

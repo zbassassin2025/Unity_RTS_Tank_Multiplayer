@@ -30,6 +30,20 @@ Transform:
   m_Father: {fileID: 7888265096678800888}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2154305022533650758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071756900373619753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0de20165998f542935a0c5e70a70eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!114 &5223371376195748414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 4037698299987527157, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 02aeb00d31cd8ba4bb39e0ceca25f80c, type: 3}
+      objectReference: {fileID: 21300000, guid: 450fef217451c4b4baf090f095d87b2c, type: 3}
     - target: {fileID: 4037698299987527157, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
       propertyPath: id
       value: 2
@@ -194,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 7867141320991037003}
     - target: {fileID: 8140953382351806833, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8140953382351806837, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -203,6 +217,10 @@ PrefabInstance:
     - target: {fileID: 8925900334796405343, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
       propertyPath: m_Name
       value: _UnitResourceGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925900334796405343, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49623054642d1a942bf0acb50d8039c6, type: 3}

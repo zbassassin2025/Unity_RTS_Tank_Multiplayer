@@ -19,7 +19,7 @@ public class ZB_HealthDisplay : MonoBehaviour
         health.ClientOnHealthUpdated -= HandleHealthUpdated;
     }
 
-    private void OnMouseEnter()
+    private void OnMouseEnter() 
     {
         healthBarParent.SetActive(true); 
     }

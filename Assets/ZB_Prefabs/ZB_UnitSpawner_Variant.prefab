@@ -37,6 +37,35 @@ MonoBehaviour:
   maxUnitQueue: 5
   spawnMoveRange: 6
   unitSpawnDuration: 4
+--- !u!114 &8410129736029325238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ec396c50e93c8458fb0f443c732a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  aimAtPoint: {fileID: 1344639750119470356}
+--- !u!114 &7846066778276265066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0de20165998f542935a0c5e70a70eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &4693213525264588883
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5323245978865353180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2726558065127371995}
@@ -234,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 02aeb00d31cd8ba4bb39e0ceca25f80c, type: 3}
+      objectReference: {fileID: 21300000, guid: cf9964491b449894480c63253ae4f6a1, type: 3}
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: buildingPreview
       value: 

@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7457
   unitSelectionArea: {fileID: 1332883302325225904}
   player: {fileID: -4177000798558613459, guid: 05e08c02bc14a204387575320d7e2d33, type: 3}
 --- !u!114 &1332883302588837910
@@ -221,4 +221,4 @@ MonoBehaviour:
   unitSelect: {fileID: 1332883302588837905}
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7457

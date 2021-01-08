@@ -81,38 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2438577425301830102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726558065127371972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfa6be718dcbe84f931fa84e1471441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  unitPrefab: {fileID: 8475945285990783295, guid: 05e08c02bc14a204387575320d7e2d33, type: 3}
-  unitSpawnTransform: {fileID: 0}
-  health: {fileID: 4860508469325272700}
---- !u!114 &7045127526988649781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726558065127371972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde5f6baf751f354280fd97cec771e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  health: {fileID: 4860508469325272700}
 --- !u!1 &3263444432667006304
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +176,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2438577425301830102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfa6be718dcbe84f931fa84e1471441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  unitPrefab: {fileID: 0}
+  unitSpawnTransform: {fileID: 0}
+  health: {fileID: 4860508469325272700}
+  remainingUnitsText: {fileID: 0}
+  unitProgressImage: {fileID: 0}
+  maxUnitQueue: 5
+  spawnMoveRange: 6
+  unitSpawnDuration: 4
+--- !u!114 &7045127526988649781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde5f6baf751f354280fd97cec771e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 4860508469325272700}
 --- !u!1001 &3686613493471309300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 02aeb00d31cd8ba4bb39e0ceca25f80c, type: 3}
+      objectReference: {fileID: 21300000, guid: cf9964491b449894480c63253ae4f6a1, type: 3}
     - target: {fileID: 5693931268852669231, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: aimAtPoint
       value: 

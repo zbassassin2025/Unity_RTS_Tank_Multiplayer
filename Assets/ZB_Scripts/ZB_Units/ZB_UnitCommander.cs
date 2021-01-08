@@ -33,16 +33,23 @@ public class ZB_UnitCommander : MonoBehaviour
             return; 
         }
 
-        if(hit.collider.TryGetComponent<ZB_Target>(out ZB_Target target))
+        if(hit.collider.TryGetComponent(out ZB_Target target))
         {
-            if(target.hasAuthority)
+            if (target == null) // test get component Target 
+            {
+                target = FindObjectOfType<ZB_Target>().GetComponent<ZB_Target>();
+                Debug.LogError(target); // not getting target  
+                return;
+            }
+
+            if (target.hasAuthority)
             {
                 TryMove(hit.point);
                 return; 
             }
 
             TryTarget(target);
-            return; 
+            return;
         }
 
         TryMove(hit.point); 
@@ -52,7 +59,13 @@ public class ZB_UnitCommander : MonoBehaviour
     {
         foreach (ZB_Unit unit in unitSelect.SelectedUnits)
         {
-            unit.GetTarget().CmdSetTarget(target.gameObject); 
+            if (target == null) // test get component Target 
+            {
+                target = FindObjectOfType<ZB_Target>().GetComponent<ZB_Target>();
+                Debug.LogError(target); // not getting target  
+                return;
+            }
+            unit.GetTarget().CmdSetTarget(target.gameObject);
         }
     }
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5416472548055243778}
   - component: {fileID: -5449981105428816840}
   m_Layer: 9
-  m_Name: T_Projectile
+  m_Name: ZB_T_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2640116412646789441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5801, z: 0.31941}
+  m_LocalScale: {x: 1, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

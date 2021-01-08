@@ -174,7 +174,6 @@ public class ZB_RTS_Player : NetworkBehaviour
 
     private void ServerOnBuildingDeSpawned(ZB_Building building) // remove building 
     {
-
         if (building.connectionToClient.connectionId != connectionToClient.connectionId)
         {
             return;
@@ -196,7 +195,7 @@ public class ZB_RTS_Player : NetworkBehaviour
         ZB_Unit.AuthorityOnUnitSpawn += AuthorityHandleUnitSpawned;  
         ZB_Unit.AuthorityOnUnitDeSpawn += AuthorityHandleUnitDeSpawned;
         ZB_Building.AuthorityOnBuildingSpawn += AuthorityHandleBuildingSpawned;
-        ZB_Building.AuthorityOnBuildingSpawn += AuthorityHandleBuildingDeSpawned;
+        ZB_Building.AuthorityOnBuildingDeSpawn += AuthorityHandleBuildingDeSpawned;
     }
 
     public override void OnStartClient()
@@ -230,7 +229,7 @@ public class ZB_RTS_Player : NetworkBehaviour
         ZB_Unit.AuthorityOnUnitSpawn -= AuthorityHandleUnitSpawned; 
         ZB_Unit.AuthorityOnUnitDeSpawn -= AuthorityHandleUnitDeSpawned;
         ZB_Building.AuthorityOnBuildingSpawn -= AuthorityHandleBuildingSpawned;
-        ZB_Building.AuthorityOnBuildingSpawn -= AuthorityHandleBuildingDeSpawned;
+        ZB_Building.AuthorityOnBuildingDeSpawn -= AuthorityHandleBuildingDeSpawned;
     }
 
     private void ClientHandleDisplayNameUpdated(string oldDisplayName, string newDisplayName)

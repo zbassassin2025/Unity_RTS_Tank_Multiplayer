@@ -278,14 +278,14 @@ PrefabInstance:
     - target: {fileID: 1933859020447205308, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: fdf244a482f550d4a93be0cbb87db4bd, type: 3}
+      objectReference: {fileID: 21300000, guid: cf9964491b449894480c63253ae4f6a1, type: 3}
     - target: {fileID: 2287352433620402440, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2287352433620402444, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.02
+      value: 1.301
       objectReference: {fileID: 0}
     - target: {fileID: 3926392366202112249, guid: ebf2033ff20d5ec4194ec635983c0ed9, type: 3}
       propertyPath: aimAtPoint

@@ -5,7 +5,7 @@ using Mirror;
 
 public class ZB_Targeting : NetworkBehaviour // Targeter 
 {
-    private ZB_Target target; // Targetable 
+   [SerializeField] private ZB_Target target; // Targetable 
 
     public ZB_Target GetTarget()
     {
@@ -27,7 +27,12 @@ public class ZB_Targeting : NetworkBehaviour // Targeter
     [Command]
     public void CmdSetTarget(GameObject targetGameObject)
     {
-        if(!targetGameObject.TryGetComponent<ZB_Target>(out ZB_Target newTarget)) 
+        if (target == null) // test 
+        {
+            target = FindObjectOfType<ZB_Target>().GetComponent<ZB_Target>();
+        }
+
+        if (!targetGameObject.TryGetComponent(out ZB_Target newTarget)) 
         {
             return; 
         }

@@ -80,41 +80,4 @@ public class ZB_UnitMovement : NetworkBehaviour
     }
 
     #endregion
-
-    #region Client
-
-    //public override void OnStartAuthority()
-    //{
-    //    mainCamera = Camera.main; 
-    //}
-
-    //[ClientCallback] // server not run update 
-    //private void Update()
-    //{
-    //    if (!hasAuthority)
-    //    {
-    //        return;
-    //    }
-
-    //    if(!Mouse.current.rightButton.wasPressedThisFrame) // new input system 
-    //    {
-    //        return; 
-    //    }
-
-    //    //if (!Input.GetMouseButtonDown(1)) // old input system 
-    //    //{
-    //    //    return;
-    //    //}
-
-    //    Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()); //Input.mousePosition old input system 
-
-    //    if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
-    //    {
-    //        return; 
-    //    }
-
-    //    CmdMove(hit.point); 
-    //}
-
-    #endregion
 }

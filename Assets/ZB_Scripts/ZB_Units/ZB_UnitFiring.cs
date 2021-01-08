@@ -8,7 +8,7 @@ public class ZB_UnitFiring : NetworkBehaviour
     [SerializeField] private ZB_Targeting targeting = null;
     [SerializeField] private GameObject projPrefab = null;
     [SerializeField] private Transform projSpawn = null;
-    [SerializeField] private float fireRange = 5f;
+    [SerializeField] private float fireRange = 2f;
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float rotSpeed = 20f;
 
@@ -17,7 +17,7 @@ public class ZB_UnitFiring : NetworkBehaviour
     [ServerCallback] // won't log warnings every frame 
     private void Update()
     {
-        ZB_Target target = targeting.GetTarget(); 
+       /* Targetable */ ZB_Target target = targeting.GetTarget(); 
 
         if(target == null)
         {

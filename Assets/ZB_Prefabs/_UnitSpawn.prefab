@@ -14,9 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  unitPrefab: {fileID: 8475945285990783295, guid: 05e08c02bc14a204387575320d7e2d33, type: 3}
-  unitSpawnTransform: {fileID: 7568916042162410871}
+  unitPrefab: {fileID: 0}
+  unitSpawnTransform: {fileID: 0}
   health: {fileID: 8008179061739897624}
+  remainingUnitsText: {fileID: 0}
+  unitProgressImage: {fileID: 0}
+  maxUnitQueue: 5
+  spawnMoveRange: 6
+  unitSpawnDuration: 4
 --- !u!1 &8106781198154747347
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,11 +158,11 @@ PrefabInstance:
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 02aeb00d31cd8ba4bb39e0ceca25f80c, type: 3}
+      objectReference: {fileID: 21300000, guid: cf9964491b449894480c63253ae4f6a1, type: 3}
     - target: {fileID: 5653437005390416125, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: buildingPreview
       value: 
-      objectReference: {fileID: 2065728558359657929}
+      objectReference: {fileID: 0}
     - target: {fileID: 8535008107859750375, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -197,13 +202,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1660254c368e91d4d9a7a5ae7732c71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2065728558359657929 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 275476605399172441, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
-  m_PrefabInstance: {fileID: 2267634630173112464}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7568916042162410871 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8535008107859750375, guid: f2a709e894405ef4c8363cd2c6aab2cc, type: 3}
-  m_PrefabInstance: {fileID: 2267634630173112464}
-  m_PrefabAsset: {fileID: 0}
