@@ -22,8 +22,8 @@ public class ZB_UnitBase : NetworkBehaviour
 
     public override void OnStopServer()
     {
+        ServerOnBaseDeSpawn?.Invoke(this);
         health.ServerOnDie -= ServerHandleDie;
-        ServerOnBaseDeSpawn?.Invoke(this); 
     }
 
     [Server]

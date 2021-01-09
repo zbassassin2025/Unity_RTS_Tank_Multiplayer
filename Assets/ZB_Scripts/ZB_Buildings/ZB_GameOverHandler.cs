@@ -35,17 +35,21 @@ public class ZB_GameOverHandler : NetworkBehaviour
     {
         bases.Remove(unitBase); 
 
-        if(bases.Count != 1)
+        if(bases.Count != 1) 
         {
             return; 
         }
 
         int playerId = bases[0].connectionToClient.connectionId; // check for connection id (player id connected)
 
-        // Debug.Log("Game Over"); 
-        RpcGameOver($"Player {playerId}"); // $ allows for variables to insert after "Text... {variable}"; 
+        if(playerId <= bases[0].connectionToClient.connectionId)
+        {
+            Debug.Log("Game Over");
 
-        ServerOnGameOver?.Invoke(); // is the game over 
+            RpcGameOver($"Player {playerId}"); // $ allows for variables to insert after "Text... {variable}"; 
+
+            ServerOnGameOver?.Invoke(); // is the game over 
+        }
     }
 
     #endregion

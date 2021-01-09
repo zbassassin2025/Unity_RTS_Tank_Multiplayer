@@ -37,6 +37,21 @@ MonoBehaviour:
   maxUnitQueue: 5
   spawnMoveRange: 6
   unitSpawnDuration: 4
+--- !u!114 &7846066778276265066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726558065127371972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0de20165998f542935a0c5e70a70eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 0}
 --- !u!114 &8410129736029325238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,20 +67,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   aimAtPoint: {fileID: 1344639750119470356}
---- !u!114 &7846066778276265066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2726558065127371972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0de20165998f542935a0c5e70a70eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!1 &4693213525264588883
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2726558065127371995}
     m_Modifications:
+    - target: {fileID: 1544682060199579255, guid: c5cb46678a04b454bb99497ba6080981, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1622704668204795902, guid: c5cb46678a04b454bb99497ba6080981, type: 3}
       propertyPath: m_Name
       value: UnitSpawn_Preview_
